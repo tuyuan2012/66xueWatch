@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--留留学-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="留留学" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="获取列表" id="fAG-SX-fHM">
+                            <connections>
+                                <action selector="pushToCircleListInterface" destination="AgC-eL-Hgc" id="tbI-rO-Xfc"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="153" y="343"/>
+        </scene>
+        <!--留留学列表-->
+        <scene sceneID="ToA-h1-FHg">
+            <objects>
+                <controller identifier="CircleListInterface" title="留留学列表" id="2UO-Fa-SFT" customClass="CircleListInterfaceController">
+                    <items>
+                        <button width="1" height="25" alignment="left" title="更新" id="i7n-Mv-C8C">
+                            <connections>
+                                <action selector="getNewWeibo" destination="2UO-Fa-SFT" id="wWw-kd-0yI"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="Odt-KK-xb1">
+                            <items>
+                                <tableRow identifier="CircleRowIconAndUserName" id="K0X-VH-IKi" customClass="CircleRowIconAndUserName">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="lF0-VU-riD">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="KMM-aM-afT"/>
+                                            <label width="0.80000000000000004" alignment="right" verticalAlignment="center" text="Label" numberOfLines="0" minimumScaleFactor="0.50000000000000011" id="Vye-yO-tE7"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="iconImage" destination="KMM-aM-afT" id="NMm-uf-UPF"/>
+                                        <outlet property="userNameLabel" destination="Vye-yO-tE7" id="0py-Un-I1D"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="CircleRowContent" id="b6J-ej-VA3" customClass="CircleRowContent">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="9sa-Dk-tiu">
+                                        <items>
+                                            <label width="1" alignment="left" alpha="0.94999999999999996" text="Label" numberOfLines="0" minimumScaleFactor="0.70000000000000007" id="2rI-u7-Cd6">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="contentLabel" destination="2rI-u7-Cd6" id="rgO-Ig-Flx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" height="25" alignment="left" title="更多" id="pI1-7f-egt">
+                            <connections>
+                                <action selector="getOldWeibo" destination="2UO-Fa-SFT" id="UYy-f2-Blv"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Odt-KK-xb1" id="EkQ-k0-aqm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="348" y="343"/>
+        </scene>
+        <!--未登录-->
+        <scene sceneID="8Mu-lJ-bbb">
+            <objects>
+                <controller identifier="UnLoginInterfacer" title="未登录" id="6AW-E6-YU3" customClass="UnLoginInterfaceController">
+                    <items>
+                        <label width="1" alignment="left" text="    没有登录信息，请您在手机端登陆。" numberOfLines="0" id="Wy2-uj-93w"/>
+                        <button width="1" alignment="left" title="返回" id="X3D-S7-ge0">
+                            <connections>
+                                <action selector="backClick" destination="6AW-E6-YU3" id="9E5-3W-nWa"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="521" y="343"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
