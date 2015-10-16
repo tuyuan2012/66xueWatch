@@ -10,7 +10,7 @@
             <objects>
                 <controller title="留留学" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="获取列表" id="fAG-SX-fHM">
+                        <button width="1" alignment="left" verticalAlignment="center" title="获取留学圈" id="fAG-SX-fHM">
                             <connections>
                                 <action selector="pushToCircleListInterface" destination="AgC-eL-Hgc" id="tbI-rO-Xfc"/>
                             </connections>
