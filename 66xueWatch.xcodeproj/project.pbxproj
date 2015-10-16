@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0A71881BD0C56100668D50 /* LYRNoLoginInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A71851BD0C56100668D50 /* LYRNoLoginInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		5E0A71891BD0C56100668D50 /* LYRWeiboTableInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A71871BD0C56100668D50 /* LYRWeiboTableInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		5E0A718C1BD0CCD700668D50 /* TestInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A718B1BD0CCD700668D50 /* TestInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		5E0A71B21BD0D7FD00668D50 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A71B11BD0D7FD00668D50 /* NotificationController.m */; settings = {ASSET_TAGS = (); }; };
+		5E0A71B41BD0D80600668D50 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 5E0A71B31BD0D80600668D50 /* PushNotificationPayload.apns */; settings = {ASSET_TAGS = (); }; };
 		5E975CB61BCF923D0066CF27 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975C991BCF923D0066CF27 /* AFHTTPRequestOperation.m */; };
 		5E975CB71BCF923D0066CF27 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975C9B1BCF923D0066CF27 /* AFHTTPRequestOperationManager.m */; };
 		5E975CB81BCF923D0066CF27 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975C9D1BCF923D0066CF27 /* AFHTTPSessionManager.m */; };
@@ -170,6 +175,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E0A71841BD0C56100668D50 /* LYRNoLoginInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRNoLoginInterfaceController.h; sourceTree = "<group>"; };
+		5E0A71851BD0C56100668D50 /* LYRNoLoginInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRNoLoginInterfaceController.m; sourceTree = "<group>"; };
+		5E0A71861BD0C56100668D50 /* LYRWeiboTableInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRWeiboTableInterfaceController.h; sourceTree = "<group>"; };
+		5E0A71871BD0C56100668D50 /* LYRWeiboTableInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRWeiboTableInterfaceController.m; sourceTree = "<group>"; };
+		5E0A718A1BD0CCD700668D50 /* TestInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestInterfaceController.h; sourceTree = "<group>"; };
+		5E0A718B1BD0CCD700668D50 /* TestInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestInterfaceController.m; sourceTree = "<group>"; };
+		5E0A71B01BD0D7FD00668D50 /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		5E0A71B11BD0D7FD00668D50 /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		5E0A71B31BD0D80600668D50 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5E975C981BCF923D0066CF27 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		5E975C991BCF923D0066CF27 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		5E975C9A1BCF923D0066CF27 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -627,12 +641,20 @@
 		E1DD57511BCF90E400D12E57 /* 66xue WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5E0A71B01BD0D7FD00668D50 /* NotificationController.h */,
+				5E0A71B11BD0D7FD00668D50 /* NotificationController.m */,
 				5E975D451BCF94E50066CF27 /* RowController */,
+				5E0A71841BD0C56100668D50 /* LYRNoLoginInterfaceController.h */,
+				5E0A71851BD0C56100668D50 /* LYRNoLoginInterfaceController.m */,
+				5E0A71861BD0C56100668D50 /* LYRWeiboTableInterfaceController.h */,
+				5E0A71871BD0C56100668D50 /* LYRWeiboTableInterfaceController.m */,
 				5E975D3F1BCF93F40066CF27 /* 66xue WatchKit Extension.entitlements */,
 				E1DD57541BCF90E400D12E57 /* InterfaceController.h */,
 				E1DD57551BCF90E400D12E57 /* InterfaceController.m */,
 				E1DD57571BCF90E400D12E57 /* Images.xcassets */,
 				E1DD57521BCF90E400D12E57 /* Supporting Files */,
+				5E0A718A1BD0CCD700668D50 /* TestInterfaceController.h */,
+				5E0A718B1BD0CCD700668D50 /* TestInterfaceController.m */,
 			);
 			path = "66xue WatchKit Extension";
 			sourceTree = "<group>";
@@ -640,6 +662,7 @@
 		E1DD57521BCF90E400D12E57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E0A71B31BD0D80600668D50 /* PushNotificationPayload.apns */,
 				E1DD57531BCF90E400D12E57 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -828,7 +851,7 @@
 						DevelopmentTeam = R65EXHH74Q;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -868,6 +891,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DD57321BCF90C700D12E57 /* Main.storyboard in Resources */,
+				5E0A71B41BD0D80600668D50 /* PushNotificationPayload.apns in Resources */,
 				E1DD57371BCF90C700D12E57 /* LaunchScreen.xib in Resources */,
 				E1DD57341BCF90C700D12E57 /* Images.xcassets in Resources */,
 			);
@@ -945,6 +969,8 @@
 			files = (
 				5E975CB61BCF923D0066CF27 /* AFHTTPRequestOperation.m in Sources */,
 				E1DD572F1BCF90C700D12E57 /* ViewController.m in Sources */,
+				5E0A71881BD0C56100668D50 /* LYRNoLoginInterfaceController.m in Sources */,
+				5E0A71891BD0C56100668D50 /* LYRWeiboTableInterfaceController.m in Sources */,
 				5E975CB71BCF923D0066CF27 /* AFHTTPRequestOperationManager.m in Sources */,
 				5E975CB91BCF923D0066CF27 /* AFNetworkReachabilityManager.m in Sources */,
 				5E975CBF1BCF923D0066CF27 /* LYROAuthViewController.m in Sources */,
@@ -952,8 +978,10 @@
 				5E975CBB1BCF923D0066CF27 /* AFURLConnectionOperation.m in Sources */,
 				5E975CBA1BCF923D0066CF27 /* AFSecurityPolicy.m in Sources */,
 				5E975CB81BCF923D0066CF27 /* AFHTTPSessionManager.m in Sources */,
+				5E0A718C1BD0CCD700668D50 /* TestInterfaceController.m in Sources */,
 				5E975CBC1BCF923D0066CF27 /* AFURLRequestSerialization.m in Sources */,
 				5E975CBE1BCF923D0066CF27 /* AFURLSessionManager.m in Sources */,
+				5E0A71B21BD0D7FD00668D50 /* NotificationController.m in Sources */,
 				5E975CC21BCF923D0066CF27 /* LYRHttpTool.m in Sources */,
 				E1DD572C1BCF90C700D12E57 /* AppDelegate.m in Sources */,
 				E1DD57291BCF90C700D12E57 /* main.m in Sources */,
@@ -1109,7 +1137,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "7db608e0-a629-4e22-ae66-f287aa3906df";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1147,7 +1175,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "7db608e0-a629-4e22-ae66-f287aa3906df";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1187,7 +1215,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "66xue WatchKit App/66xue WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1210,7 +1237,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "66xue WatchKit App/66xue WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = _6xue_WatchKit_Extension;

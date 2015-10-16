@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" height="30" alignment="left" title="微博" id="h89-pr-qLn">
+                        <button width="1" height="30" alignment="left" title="哈哈" id="h89-pr-qLn">
                             <connections>
                                 <action selector="weiboClick" destination="AgC-eL-Hgc" id="3IJ-wN-qFH"/>
                             </connections>
@@ -29,6 +29,7 @@
             <objects>
                 <controller identifier="weibo" title="微博内容" id="JcL-4R-lR6" customClass="LYRWeiboTableInterfaceController">
                     <items>
+                        <label width="136" height="156" alignment="left" text="Label" id="wZW-5S-A9O"/>
                         <button width="1" height="25" alignment="left" title="更新" id="Lxs-jn-Dzy">
                             <connections>
                                 <action selector="getNewWeibo" destination="JcL-4R-lR6" id="za6-5B-kfT"/>
@@ -69,11 +70,12 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="dataTitle" destination="wZW-5S-A9O" id="hVG-l4-ZNQ"/>
                         <outlet property="table" destination="DLo-1j-vTt" id="xsG-aw-6YU"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="434" y="335"/>
+            <point key="canvasLocation" x="434" y="385.5"/>
         </scene>
         <!--未登录-->
         <scene sceneID="wza-AA-p2y">
@@ -89,7 +91,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="675" y="365"/>
+            <point key="canvasLocation" x="655" y="335"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -113,6 +115,25 @@
                 <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--testInterface-->
+        <scene sceneID="YvX-6C-71S">
+            <objects>
+                <controller identifier="testInterface" hidesWhenLoading="NO" id="h9v-bu-QyZ" customClass="TestInterfaceController">
+                    <items>
+                        <label alignment="left" text="我是测试" id="thO-7D-aBS"/>
+                        <button width="1" alignment="left" title="请求" id="1Ab-dT-P7Q">
+                            <connections>
+                                <action selector="buttonClick" destination="h9v-bu-QyZ" id="Tef-2T-u7Z"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="testLabel" destination="thO-7D-aBS" id="SCZ-JD-0av"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="294" y="181"/>
         </scene>
     </scenes>
 </document>

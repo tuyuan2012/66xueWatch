@@ -77,24 +77,19 @@
 
 -(void)requestDataWith:(NSDictionary*)userInfo reply:(void (^)(NSDictionary *))reply
 {
-    if(userInfo){
-        NSString *openValue = [userInfo objectForKey:@"openType"];
-        if(openValue && [@"say hi to phone" isEqualToString:openValue]){
-            NSMutableDictionary *replyInfo = [NSMutableDictionary dictionary];
-            
-            NSDate *  senddate=[NSDate date];
-            
-            NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
-            
-            [dateformatter setDateFormat:@"HH:mm:ss"];
-            
-            NSString *locationString=[dateformatter stringFromDate:senddate];
-            [replyInfo setObject:[NSString stringWithFormat:@"iphone%@",locationString] forKey:@"words"];
-            
-            //主应用处理完成后，回调来自watchkit extension的 reply(replyInfo)，否则方法响应失败
-            reply(replyInfo);
-        }
-    }
+    if(userInfo && [userInfo objectForKey:@"parameters"]){
+        LYRWeiboParametersRequest *parameters = [NSKeyedUnarchiver unarchiveObjectWithData:[userInfo objectForKey:@"parameters"]];
+        [LYRHttpTool weiboWithParameters:parameters statusToolSuccess:^(id responseObject) {
+            NSArray*models = [LYRWeibo arrayOfModelsFromDictionaries:responseObject[@"statuses"]];
+            for (LYRWeibo*weibo in models) {
+                [LYRWeiboTool saveWeiboWith:weibo];
+            }
+            //返回自定义的状态码 方便手表拓展app判断请求状态
+            reply(@{@"code":@"0000"});
+        } failure:^(NSError *error) {
+            reply(@{@"code":@"9999"});
+        }];
+    }   
 }
 
 -(void)beginBackgroundTask

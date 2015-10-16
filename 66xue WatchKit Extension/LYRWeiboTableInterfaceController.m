@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
 @property(nonatomic,strong)NSMutableArray*weiboArray;
 - (IBAction)getNewWeibo;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *dataTitle;
 - (IBAction)getOldWeibo;
 @end
 
@@ -28,11 +29,10 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     self.weiboArray = context;
-   
     
     [self reloadData];
-       
     
+    [self.dataTitle setText:@"我日日"];
     // Configure interface objects here.
 }
 
